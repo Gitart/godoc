@@ -74,7 +74,7 @@ $ openssl req -new -x509 -sha256 -key server.key -out server.crt -days 3650
 
 В `main.go` , подготовьте функцию `StartNonTLSServer()` , содержащую mux с одной маршрутизацией, для перенаправления запросов из протокола `http` в `https` . Позже все запросы, которые указывают , перенаправляются на . Запустите Mux в порту . `[http://localhost](http://localhost)` `[https://localhost](https://localhost)` `:80`
 
-```
+```go
 package main
 
 import (
